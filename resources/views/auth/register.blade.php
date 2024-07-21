@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,6 +22,17 @@
 		************* -->
 		<link rel="stylesheet" href="assets/fonts/bootstrap/bootstrap-icons.css" />
 		<link rel="stylesheet" href="assets/css/main.min.css" />
+        <style>
+            .password-error {
+                border-color: red !important;
+            }
+        
+            .error-message {
+                color: red;
+                font-size: 0.875rem;
+                margin-top: 0.25rem;
+            }
+        </style>
 	</head>
 
 	<body>
@@ -30,14 +40,28 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-8 col-lg-5 col-sm-6 col-12">
-                    <form action="index.html" class="my-5">
-                        @csrf
-                        <div class="border rounded-2 p-4 mt-5">
-                            <div class="login-form">
-                                <a href="index.html" class="mb-4 d-flex">
-                                    <img src="assets/images/logo.svg" class="img-fluid login-logo" alt="Mars Admin Dashboard" />
-                                </a>
-                                <h5 class="fw-bold mb-5">Create your account.</h5>
+                    <div class="border rounded-2 p-4 mt-5 mb-5">
+                        <div class="login-form">
+                            <a href="index.html" class="mb-4 d-flex">
+                                <img src="assets/images/logo.svg" class="img-fluid login-logo" alt="Mars Admin Dashboard" />
+                            </a>
+                            <h5 class="fw-bold mb-3">Create your account.</h5>
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif              
+                            @if (Session::has('status'))
+                            <div class="alert alert-{{ Session::get('status') == 'success' ? 'success' : 'danger' }} alert-dismissible fade show" role="alert" id="flashMessage">
+                                {{ Session::get('message') }}
+                            </div>
+                            @endif
+                            <form action="{{ route('registered') }}" class="my-5" method="POST">
+                                @csrf
                                 <div class="row mb-3">
                                     <div class="col">
                                         <label class="form-label">First Name</label>
@@ -62,28 +86,55 @@
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Confirm Password</label>
-                                    <input type="password" name="cpassword" class="form-control" placeholder="Re-enter password" />
+                                    <input type="password" id="cpassword" class="form-control" placeholder="Re-enter password" />
+                                    <div id="passwordError" class="error-message"></div>
                                 </div>
                                 <div class="mb-3">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="termsConditions" />
+                                        <input class="form-check-input" type="checkbox" value="" id="termsConditions" onchange="toggleSignupButton()" />
                                         <label class="form-check-label" for="termsConditions">I agree to the terms and conditions</label>
                                     </div>
                                 </div>
                                 <div class="d-grid py-3">
-                                    <button type="submit" class="btn btn-lg btn-primary">SIGNUP</button>
+                                    <button type="submit" class="btn btn-lg btn-primary" id="signupButton" disabled>SIGNUP</button>
                                 </div>
                                 <div class="text-center pt-4">
                                     <span>Already have an account?</span>
                                     <a href="{{ route('login') }}" class="text-blue text-decoration-underline ms-2">Login</a>
                                 </div>
-                            </div>
+                            </form>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
-    <!-- Container end -->
-	</body>
+        <!-- Container end -->
+        <script>
+            function handleFormValidation() {
+                var password = document.getElementsByName("password")[0].value;
+                var confirmPassword = document.getElementById("cpassword").value;
+                var errorDiv = document.getElementById("passwordError");
+                var signupButton = document.getElementById("signupButton");
+                var checkbox = document.getElementById("termsConditions");
 
+                if (password !== confirmPassword) {
+                    errorDiv.textContent = "Passwords do not match";
+                    signupButton.disabled = true;
+                } else if(signupButton.disabled = !checkbox.checked) {
+                    errorDiv.textContent = "";
+                    signupButton.disabled = true;
+                }else {
+                    errorDiv.textContent = "";
+                    signupButton.disabled = false;
+                }
+            }
+
+            // Event listeners
+            document.getElementsByName("password")[0].addEventListener("input", handleFormValidation);
+            document.getElementById("cpassword").addEventListener("input", handleFormValidation);
+            document.getElementById("termsConditions").addEventListener("change", handleFormValidation);
+        </script>
+		<script type="text/javascript">window.setTimeout("document.getElementById('flashMessage').style.display='none';", 5000); </script>
+
+    </body>
 </html>

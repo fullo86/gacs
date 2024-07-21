@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('last_name', 50)->required();            
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('phone', 13)->required();
+            $table->string('phone', 13);
             $table->smallInteger('status');
             $table->string('image', 255)->required();
             $table->rememberToken();

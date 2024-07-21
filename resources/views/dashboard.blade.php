@@ -1,11 +1,11 @@
 @extends('layouts.main')
-@yield('title', 'Home Dashboard')
+@section('title', 'GenieAcsBot | Home Dashboard')
 
 @section('dashboard')
 <div class="app-body">
     <!-- Container starts -->
     <div class="container-fluid">
-
+{{-- 
         <!-- Row start -->
         <div class="row">
             <div class="col-xl-4 col-sm-6 col-12">
@@ -431,7 +431,7 @@
                 </div>
             </div>
         </div>
-        <!-- Row end -->
+        <!-- Row end --> --}}
 
     </div>
     <!-- Container ends -->

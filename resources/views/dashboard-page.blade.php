@@ -86,8 +86,8 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a class="active" href="#home">Home</a></li>
-                        <li><a href="#features">Features </a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#service">Service </a></li>
                         <li><a href="#pricing">Pricing</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <li><a href="#">Documentation</a></li>
@@ -113,7 +113,7 @@
 									<p class="lead" data-animation="animated fadeInLeft">Serving your network needs with the latest technology.</p>
 									 <a data-scroll href="#pricing" class="btn btn-light btn-radius btn-brd effect-1 slide-btn" data-animation="animated fadeInLeft">View Plans</a>
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<a data-scroll href="#overviews" class="btn btn-light btn-radius btn-brd effect-1 slide-btn" data-animation="animated fadeInRight">All Features</a>
+									<a data-scroll href="#service" class="btn btn-light btn-radius btn-brd effect-1 slide-btn" data-animation="animated fadeInRight">All Services</a>
 								</div>
 							</div>
 						</div><!-- end row -->            
@@ -123,10 +123,10 @@
 		</div>
 	</div>
 	
-    <div id="features" class="section wb" style="background: rgb(248, 248, 248)">
+    <div id="service" class="section wb" style="background: rgb(248, 248, 248)">
         <div class="container">
             <div class="section-title text-center">
-                <h3>Hosting Packages</h3>
+                <h3>Our Services</h3>
                 <p class="lead">All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, true generator<br> on the Internet. It uses a dictionary of over..</p>
             </div><!-- end title -->
 
@@ -135,25 +135,10 @@
                     <div class="widget clearfix">
                         <img src="/assets/homepage/uploads/hosting_01.jpg" alt="" class="img-responsive">
                         <div class="widget-title">
-                            <h3>Shared Hosting</h3>
-                            <small>Starting from $40/month</small>
+                            <h3>Whatsapp BOT</h3>
                         </div>
                         <!-- end title -->
                         <p>Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, true dont miss this one!</p>
-
-                        <hr> 
-
-                        <div class="footer-social">
-                            <a href="/assets/homepage/#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="Free Page Builder"><i class="flaticon-coding"></i></a>
-                            <a href="/assets/homepage/#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="WordPress Support"><i class="flaticon-wordpress-logo"></i></a>
-                            <a href="/assets/homepage/#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="1 Domain Free"><i class="flaticon-world-wide-web"></i></a>
-                            <a href="/assets/homepage/#" class="btn global-radius"  data-toggle="tooltip" data-placement="top" title="50MB Bandwdith"><i class="flaticon-cloud-computing-1"></i></a>
-                        </div>
-
-                        <hr>
-
-                        <a href="/assets/homepage/#pricing" data-scroll class="btn btn-light grd1 effect-1 btn-radius btn-brd">Order Now</a>
-
                     </div><!--widget -->
                 </div><!-- end col -->
 
@@ -161,25 +146,10 @@
                     <div class="widget clearfix">
                         <img src="/assets/homepage/uploads/hosting_02.jpg" alt="" class="img-responsive">
                         <div class="widget-title">
-                            <h3>Reseller Hosting</h3>
-                            <small>Starting from $80/month</small>
+                            <h3>Telegram BOT</h3>
                         </div>
                         <!-- end title -->
                         <p>Internet lorem Ipsum generators on the tend to repeat predefined chunks as necessary, finally its release!</p>
-
-                        <hr> 
-
-                        <div class="footer-social">
-                            <a href="/assets/homepage/#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="Free Page Builder"><i class="flaticon-coding"></i></a>
-                            <a href="/assets/homepage/#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="WordPress Support"><i class="flaticon-wordpress-logo"></i></a>
-                            <a href="/assets/homepage/#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="1 Domain Free"><i class="flaticon-world-wide-web"></i></a>
-                            <a href="/assets/homepage/#" class="btn global-radius"  data-toggle="tooltip" data-placement="top" title="150MB Bandwdith"><i class="flaticon-cloud-computing-1"></i></a>
-                            <a href="/assets/homepage/#" class="btn global-radius"  data-toggle="tooltip" data-placement="top" title="Money Back Guarentee"><i class="flaticon-money"></i></a>
-                        </div>
-                        <hr>
-
-                        <a href="/assets/homepage/#pricing" data-scroll class="btn btn-light grd1 effect-1 btn-radius btn-brd">Order Now</a>
-
                     </div><!--widget -->
                 </div><!-- end col -->
 
@@ -188,25 +158,9 @@
                         <img src="/assets/homepage/uploads/hosting_03.jpg" alt="" class="img-responsive">
                         <div class="widget-title">
                             <h3>Dedicated Server</h3>
-                            <small>Starting from $120/month</small>
                         </div>
                         <!-- end title -->
                         <p>Predefined internet lorem Ipsum generators on the tend to repeat chunks as necessary, true and more..</p>
-
-                        <hr> 
-
-                        <div class="footer-social">
-                            <a href="/assets/homepage/#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="Free Page Builder"><i class="flaticon-coding"></i></a>
-                            <a href="/assets/homepage/#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="WordPress Support"><i class="flaticon-wordpress-logo"></i></a>
-                            <a href="/assets/homepage/#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="1 Domain Free"><i class="flaticon-world-wide-web"></i></a>
-                            <a href="/assets/homepage/#" class="btn global-radius"  data-toggle="tooltip" data-placement="top" title="Unlimited Bandwdith"><i class="flaticon-cloud-computing-1"></i></a>
-                            <a href="/assets/homepage/#" class="btn global-radius"  data-toggle="tooltip" data-placement="top" title="Money Back Guarentee"><i class="flaticon-money"></i></a>
-                            <a href="/assets/homepage/#" class="btn global-radius"  data-toggle="tooltip" data-placement="top" title="24/7 Support"><i class="flaticon-lifesaver-security-sportive-tool"></i></a>
-                        </div>
-                        <hr>
-
-                        <a href="/assets/homepage/#pricing" data-scroll class="btn btn-light grd1 effect-1 btn-radius btn-brd">Order Now</a>
-
                     </div><!--widget -->
                 </div><!-- end col -->
             </div><!-- end row -->
@@ -223,8 +177,8 @@
                 <div class="col-md-6">
                     <div class="pricing-table pricing-table-highlighted">
                         <div class="pricing-table-header grd1">
-                            <h2>Dedicated Server</h2>
-                            <h3>$85/month</h3>
+                            <h2>Premium Features</h2>
+                            <h3>IDR 50.0000/month</h3>
                         </div>
                         <div class="pricing-table-space"></div>
                         <div class="pricing-table-features">
@@ -235,7 +189,7 @@
                             <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
                         </div>
                         <div class="pricing-table-sign-up">
-                            <a href="/assets/homepage/#contact" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">Order Now</a>
+                            <a href="{{ route('login') }}" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">Order Now</a>
                         </div>
                     </div>
                 </div>
@@ -282,7 +236,6 @@
                     <div class="widget clearfix">
                         <div class="widget-title">
                             <img src="/assets/homepage/images/logos/logo-hosting-light.png" alt="">
-                            <small>Web Hosting Template</small>
                         </div>
                     </div><!-- end clearfix -->
                 </div><!-- end col -->
@@ -294,7 +247,7 @@
                         </div>
                         <ul class="footer-links">
                             <li><a href="#home">Home</a></li>
-                            <li><a href="#features">Features</a></li>
+                            <li><a href="#service">Service</a></li>
                             <li><a href="#pricing">Pricing</a></li>
 							<li><a href="#contact">Contact</a></li>
                         </ul><!-- end links -->
@@ -340,5 +293,36 @@
     <!-- ALL PLUGINS -->
     <script src="/assets/homepage/js/custom.js"></script>
 
+    <script>
+        // Fungsi untuk menetapkan kelas 'active' pada link berdasarkan hash
+        function setActiveLink() {
+            // Ambil hash dari URL saat ini
+            var hash = window.location.hash;
+        
+            // Cari semua elemen <a> di dalam menu
+            var links = document.querySelectorAll('a');
+        
+            // Loop melalui semua link
+            links.forEach(function(link) {
+                // Hapus kelas 'active' dari semua link terlebih dahulu
+                link.classList.remove('active');
+        
+                // Jika href link sama dengan hash dan tidak kosong
+                if (link.getAttribute('href') === hash && hash !== '') {
+                    // Tambahkan kembali kelas 'active'
+                    link.classList.add('active');
+                }
+            });
+        }
+        
+        // Panggil fungsi setActiveLink() untuk pertama kali saat halaman dimuat
+        setActiveLink();
+        
+        // Tambahkan event listener untuk mendeteksi perubahan hash URL
+        window.addEventListener('hashchange', function() {
+            // Panggil kembali setActiveLink() saat hash URL berubah
+            setActiveLink();
+        });
+        </script>            
 </body>
 </html>

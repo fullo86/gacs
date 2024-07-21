@@ -21,7 +21,7 @@
 											<div class="row gx-3">
 												<div class="col-12">
 													@if ($errors->any())
-														<div class="alert alert-danger">
+														<div class="alert alert-danger alert-dismissible fade show" role="alert">
 															<ul>
 																@foreach ($errors->all() as $error)
 																	<li>{{ $error }}</li>

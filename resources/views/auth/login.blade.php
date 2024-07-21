@@ -37,7 +37,7 @@
 							</a>
 							<h5 class="fw-bold mb-5">Sign in to access dashboard.</h5>			  
 							@if (Session::has('status'))
-							<div class="alert alert-danger alert-dismissible fade show" role="alert" id="flashMessage">
+							<div class="alert alert-{{ Session::get('status') == 'success' ? 'success' : 'danger' }} alert-dismissible fade show" role="alert" id="flashMessage">
 								{{ Session::get('message') }}
 							</div>
 							@endif

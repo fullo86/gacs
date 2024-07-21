@@ -47,7 +47,7 @@
                             </a>
                             <h5 class="fw-bold mb-3">Create your account.</h5>
                             @if ($errors->any())
-                                <div class="alert alert-danger">
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
                                     <ul>
                                         @foreach ($errors->all() as $error)
                                             <li>{{ $error }}</li>

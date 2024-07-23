@@ -27,6 +27,13 @@
 			************ Vendor Css Files *************
 		************ -->
 
+		<!-- Midtrans-->
+		<script type="text/javascript"
+			src="https://app.sandbox.midtrans.com/snap/snap.js"
+			data-client-key="{{config('midtrans.client_key')}}">
+		</script>
+
+		
 		<!-- Scrollbar CSS -->
 		<link rel="stylesheet" href="/assets/vendor/overlay-scroll/OverlayScrollbars.min.css" />
 	</head>
@@ -94,7 +101,7 @@
 								</ul>
 							</li>
 							<li>
-								<a href="#">
+								<a href="{{ route('transactions') }}">
 									<i class="bi bi-currency-dollar"></i>
 									<span class="menu-text">Transactions</span>
 								</a>
@@ -195,7 +202,7 @@
 						<!-- Container starts -->
 						<div class="container-fluid">
 							<div class="row">
-								<div class="col-xxl-6">
+								<div class="col-xxl-12">
 
 									<!-- Start content -->
 									@yield('users')
@@ -203,6 +210,8 @@
 									@yield('change-password')
 									@yield('bot_wa')
 									@yield('bot_telegram')
+									@yield('transactions')
+									@yield('checkout')
 									<!-- End content -->									
 								</div>
 							</div>
@@ -234,6 +243,7 @@
 
 		<script type="text/javascript">window.setTimeout("document.getElementById('flashMessage').style.display='none';", 5000); </script>
 
+		
 		<!-- Custom JS files -->
 		<script src="/assets/js/custom.js"></script>
 	</body>

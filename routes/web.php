@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BotController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\SnapController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -42,8 +43,13 @@ Route::middleware('auth')->group(function() {
     Route::patch('/account/change-password/{id}', [UserController::class, 'store_new_password'])->name('account-changepwd');
     
     Route::get('/whatsapp_bot', [BotController::class, 'page_bot_wa'])->name('bot_wa');
+    Route::post('/whatsapp_bot/save', [BotController::class, 'store_inform_wa'])->name('store_inform_wa_bot');
+
     Route::get('/telegram_bot', [BotController::class, 'page_bot_telegram'])->name('bot_telegram');
-    
+    Route::post('/telegram_bot/save', [BotController::class, 'store_inform_telegram'])->name('store_inform_telegram_bot');
+
+    Route::get('/transactions', [SnapController::class, 'index'])->name('transactions');
+    Route::get('/transactions/checkout/{id}', [SnapController::class, 'confirmTrx'])->name('confirm-trx');
 });
 
 

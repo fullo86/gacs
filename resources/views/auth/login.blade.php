@@ -52,10 +52,10 @@
 									<input type="password" name="password" class="form-control" placeholder="Enter password" />
 								</div>
 								<div class="d-flex align-items-center justify-content-between">
-									<div class="form-check m-0">
-										<input class="form-check-input" type="checkbox" value="" id="rememberPassword" />
+									{{-- <div class="form-check m-0">
+										<input class="form-check-input" type="checkbox" value="" id="rememberPassword" /> --}}
 										{{-- <label class="form-check-label" for="rememberPassword">Remember</label> --}}
-									</div>
+									{{-- </div> --}}
 									<a href="{{ route('lostpassword') }}" class="text-blue text-decoration-underline">Lost password?</a>
 								</div>
 								<div class="d-grid py-3 mt-4">

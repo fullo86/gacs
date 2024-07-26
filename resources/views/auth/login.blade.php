@@ -16,7 +16,7 @@
 		<meta property="og:description" content="Marketplace for Bootstrap Admin Dashboards">
 		<meta property="og:type" content="Website">
 		<meta property="og:site_name" content="Bootstrap Gallery">
-		<link rel="shortcut icon" href="assets/images/favicon.svg" />
+		{{-- <link rel="shortcut icon" href="assets/images/favicon.svg" /> --}}
 
 		<!-- *************
 			************ CSS Files *************
@@ -32,9 +32,9 @@
 				<div class="col-xl-4 col-lg-5 col-sm-6 col-12">
 					<div class="border rounded-2 p-4 mt-5">
 						<div class="login-form">
-							<a href="index.html" class="mb-4 d-flex">
+							{{-- <a href="index.html" class="mb-4 d-flex">
 								<img src="assets/images/logo.svg" class="img-fluid login-logo" alt="Mars Admin Dashboard" />
-							</a>
+							</a> --}}
 							<h5 class="fw-bold mb-5">Sign in to access dashboard.</h5>			  
 							@if (Session::has('status'))
 							<div class="alert alert-{{ Session::get('status') == 'success' ? 'success' : 'danger' }} alert-dismissible fade show" role="alert" id="flashMessage">

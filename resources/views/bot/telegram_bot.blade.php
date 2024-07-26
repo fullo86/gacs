@@ -25,20 +25,20 @@
                             <div class="col-lg-8 col-sm-4 col-12">
                                 <div class="mb-3">
                                     <label class="form-label">TOKEN BOT Telegram</label>
-                                    <input type="text" name="token" class="form-control" placeholder="Enter Token" />
+                                    <input type="text" name="token" class="form-control" placeholder="Enter Token" maxlength="254" required/>
                                 </div>
                             </div>
                             <div class="col-lg-8 col-sm-4 col-12">
                                 <div class="mb-3">
                                     <label class="form-label">URL API GenieAcs</label>
-                                    <input type="text" name="url" class="form-control" placeholder="Enter Url e.g: (Port 7557 / Example http://12.34.56.78:7557)" />
+                                    <input type="text" name="url" class="form-control" placeholder="Enter Url e.g: (Port 7557 / Example http://12.34.56.78:7557)" maxlength="149"/>
                                 </div>
                             </div>
                             <div class="col-lg-8 col-sm-4 col-12">
                                 <div class="col-lg-8 col-sm-4 col-12">
                                     <div class="mb-3">
                                         <label class="form-label">Mac Address</label>
-                                        <input type="text" name="mac" class="form-control" placeholder="Enter Mac Address" />
+                                        <input type="text" name="mac" class="form-control" placeholder="Enter Mac Address"  maxlength="29" required/>
                                     </div>
                                 </div>
                                 <div class="mb-3">

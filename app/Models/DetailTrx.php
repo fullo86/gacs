@@ -10,7 +10,7 @@ class DetailTrx extends Model
     use HasFactory;
 
     protected $table = 'transaction_detail';
-    protected $fillable = ['order_id', 'status_code', 'transaction_status', 'payment_type', 'transaction_time', 'bank', 'va_number', 'pdf_url'];
+    protected $fillable = ['order_id', 'trx_id', 'status_code', 'transaction_status', 'payment_type', 'transaction_time', 'bank', 'va_number', 'pdf_url'];
     protected $primaryKey = 'order_id';
     public $incrementing = false;
 
@@ -18,4 +18,5 @@ class DetailTrx extends Model
     {
         return $this->belongsTo(Transaction::class, 'order_id', 'order_id');
     }
+
 }

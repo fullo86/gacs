@@ -44,12 +44,21 @@ Route::middleware('auth')->group(function() {
     
     Route::get('/whatsapp_bot', [BotController::class, 'page_bot_wa'])->name('bot_wa');
     Route::post('/whatsapp_bot/save', [BotController::class, 'store_inform_wa'])->name('store_inform_wa_bot');
-
     Route::get('/telegram_bot', [BotController::class, 'page_bot_telegram'])->name('bot_telegram');
     Route::post('/telegram_bot/save', [BotController::class, 'store_inform_telegram'])->name('store_inform_telegram_bot');
+    Route::delete('/transactions/delete/{id}', [BotController::class, 'destroy'])->name('remove-trx');
 
     Route::get('/transactions', [SnapController::class, 'index'])->name('transactions');
     Route::get('/transactions/checkout/{id}', [SnapController::class, 'confirmTrx'])->name('confirm-trx');
+    Route::delete('/transactions/remove/{id}', [BotController::class, 'destroy'])->name('remove-trx');
+    Route::get('/active/{id}', [SnapController::class, 'trigger'])->name('active');
+
+    Route::middleware('auth-admin')->group(function() {
+        Route::get('/transactions/show/deleted', [BotController::class, 'showDeleted'])->name('show-deleted');
+        Route::get('/transactions/restore/{id}', [BotController::class, 'restore'])->name('restore-trx');    
+    });
 });
+
+Route::get('/active/service/{id}', [SnapController::class, 'start_service'])->name('active');
 
 

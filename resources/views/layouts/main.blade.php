@@ -50,8 +50,9 @@
 
 					<!-- App brand starts -->
 					<div class="app-brand px-3 py-2 d-flex align-items-center">
-						<a href="/index.html">
-							<img src="/assets/images/logo.svg" class="logo" alt="Bootstrap Gallery" />
+						<h2>GENIEACS BOT</h2>
+						{{-- <a href="/index.html">
+							<img src="/assets/images/logo.svg" class="logo" alt="Bootstrap Gallery" /> --}}
 						</a>
 					</div>
 					<!-- App brand ends -->
@@ -155,6 +156,8 @@
 								Dashboard
 								@elseif(request()->route()->uri == 'users')
 								Users
+								@elseif(request()->route()->uri == 'transactions')
+								Transactions
 								@elseif(request()->route()->uri == 'whatsapp_bot')
 								BOT
 								<li class="breadcrumb-item text-secondary">Whatsapp BOT</li>
@@ -212,6 +215,7 @@
 									@yield('bot_telegram')
 									@yield('transactions')
 									@yield('checkout')
+									@yield('show-deleted')
 									<!-- End content -->									
 								</div>
 							</div>

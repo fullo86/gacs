@@ -8,6 +8,14 @@
             <h4 class="card-title">Transactions</h4>
         </div>
         <div class="card-body">
+            @if (Auth::user()->role_id == 1)
+                <a href="{{ route('show-deleted') }}" class="btn btn-dark btn-sm mb-3">Deleted Transactions</a> 
+            @endif
+            @if (Session::has('status'))
+                <div class="alert alert-{{ Session::get('status') == 'success' ? 'success' : 'danger' }} alert-dismissible fade show" role="alert" id="flashMessage">
+                    {{ Session::get('message') }}
+                </div>
+            @endif                    
             <div class="border border-dark rounded-3">
                 <table class="table align-middle table-hover m-0">
                     <thead>
@@ -16,6 +24,8 @@
                             <th scope="col">Order ID</th>
                             <th scope="col">Service</th>
                             <th scope="col">Mac Address</th>
+                            <th scope="col">Start Date</th>
+                            <th scope="col">End Date</th>
                             <th scope="col">Status</th>
                             <th scope="col">Actions</th>
                         </tr>
@@ -36,10 +46,23 @@
                                     @endif
                                 </td>
                                 <td>{{ $row->mac }}</td>
+                                <td>{{ $row->start_date }}</td>
+                                <td>{{ $row->end_date }}</td>
                                 <td>{{ $row->status }}</td>
                                     <td>
-                                        <a href="{{ route('confirm-trx', $row->id) }}" class="btn btn-info btn-sm">Checkout
-                                        </a>
+                                        @if ($row->status == 'active')
+                                            <a href="{{ route('confirm-trx', $row->id) }}" class="btn btn-info btn-sm">Detail
+                                            </a>                                                                                    
+                                        @else
+                                            <a href="{{ route('confirm-trx', $row->id) }}" class="btn btn-info btn-sm">Checkout
+                                            </a>                                            
+                                        @endif 
+                                        <form action="{{ route('remove-trx', $row->id) }}" method="post" class="d-inline">
+                                            @method('delete')
+                                            @csrf
+                                            <button class="btn btn-danger btn-sm" onclick="return confirm('Delete Transaction with the order id {{ $row->order_id }}?')" type="submit">Delete
+                                            </button>                                                
+                                        </form>
                                     </td>    
                                 </form>
                             </tr>

@@ -47,9 +47,7 @@
       window.snap.embed('{{$snapToken}}', {
         embedId: 'snap-container',
         onSuccess: function (result) {
-          /* You may add your own implementation here */
-          clearCart();
-          window.location.href = '/customer/transaction/history'; // Ganti dengan rute yang sesuai
+            window.location.href = 'https://3ca0-118-96-18-231.ngrok-free.app/transactions'
         },
         onPending: function (result) {
           /* You may add your own implementation here */

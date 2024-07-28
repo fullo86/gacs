@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\UserRequest;
 use App\Mail\VerificationEmail;
+use App\Models\BotCommend;
 use App\Models\User;
 use Illuminate\Support\Str;
 

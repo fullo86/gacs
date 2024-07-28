@@ -31,4 +31,9 @@ class Transaction extends Model
     {
         return $this->hasOne(DetailTrx::class, 'order_id', 'order_id');
     }
+
+    public function botcmd()
+    {
+        return $this->belongsToMany(BotCommend::class, 'user_bot_command', 'transaction_id', 'bot_id')->withPivot('id', 'status', 'alias', 'bot_id');
+    }
 }

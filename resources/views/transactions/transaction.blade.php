@@ -16,7 +16,7 @@
                     {{ Session::get('message') }}
                 </div>
             @endif                    
-            <div class="border border-dark rounded-3">
+            <div class="table-responsive">
                 <table class="table align-middle table-hover m-0">
                     <thead>
                         <tr>
@@ -49,22 +49,18 @@
                                 <td>{{ $row->start_date }}</td>
                                 <td>{{ $row->end_date }}</td>
                                 <td>{{ $row->status }}</td>
-                                    <td>
-                                        @if ($row->status == 'active')
-                                            <a href="{{ route('confirm-trx', $row->id) }}" class="btn btn-info btn-sm">Detail
-                                            </a>                                                                                    
-                                        @else
-                                            <a href="{{ route('confirm-trx', $row->id) }}" class="btn btn-info btn-sm">Checkout
-                                            </a>                                            
-                                        @endif 
-                                        <form action="{{ route('remove-trx', $row->id) }}" method="post" class="d-inline">
-                                            @method('delete')
-                                            @csrf
-                                            <button class="btn btn-danger btn-sm" onclick="return confirm('Delete Transaction with the order id {{ $row->order_id }}?')" type="submit">Delete
-                                            </button>                                                
-                                        </form>
-                                    </td>    
-                                </form>
+                                <td>
+                                    @if ($row->status == 'active')
+                                        <a href="{{ route('bot-commands', $row->id) }}" class="btn btn-info btn-sm">Command Settings</a>                                                                                    
+                                    @else
+                                        <a href="{{ route('confirm-trx', $row->id) }}" class="btn btn-info btn-sm">Checkout</a>                                            
+                                    @endif 
+                                    <form action="{{ route('remove-trx', $row->id) }}" method="post" class="d-inline">
+                                        @method('delete')
+                                        @csrf
+                                        <button class="btn btn-danger btn-sm" onclick="return confirm('Delete Transaction with the order id {{ $row->order_id }}?')" type="submit">Delete</button>                                                
+                                    </form>
+                                </td>    
                             </tr>
                         @endforeach
                     </tbody>
@@ -72,5 +68,5 @@
             </div>
         </div>
     </div>
-</div>    
+</div>
 @endsection

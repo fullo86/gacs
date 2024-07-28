@@ -82,7 +82,9 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/assets/homepage/index.html"><img src="/assets/homepage/images/logos/logo-hosting.png" alt="image"></a>
+                    {{-- <a class="navbar-brand" href="/assets/homepage/index.html">
+                        <img src="/assets/homepage/images/logos/logo-hosting.png" alt="image">
+                    </a> --}}
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
@@ -127,29 +129,29 @@
         <div class="container">
             <div class="section-title text-center">
                 <h3>Our Services</h3>
-                <p class="lead">All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, true generator<br> on the Internet. It uses a dictionary of over..</p>
+                <p class="lead">Geniceacsbot is a bot service that manages your network efficiently and automatically.</p>
             </div><!-- end title -->
 
             <div class="row dev-list text-center">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                     <div class="widget clearfix">
-                        <img src="/assets/homepage/uploads/hosting_01.jpg" alt="" class="img-responsive">
+                        <img src="/assets/homepage/uploads/wa.jpeg" alt="" class="img-responsive">
                         <div class="widget-title">
                             <h3>Whatsapp BOT</h3>
                         </div>
                         <!-- end title -->
-                        <p>Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, true dont miss this one!</p>
+                        <p>WhatsApp Bot service is an automated solution that enables effective interaction with users through the WhatsApp application.</p>
                     </div><!--widget -->
                 </div><!-- end col -->
 
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
                     <div class="widget clearfix">
-                        <img src="/assets/homepage/uploads/hosting_02.jpg" alt="" class="img-responsive">
+                        <img src="/assets/homepage/uploads/telegram.jpg" alt="" class="img-responsive">
                         <div class="widget-title">
                             <h3>Telegram BOT</h3>
                         </div>
                         <!-- end title -->
-                        <p>Internet lorem Ipsum generators on the tend to repeat predefined chunks as necessary, finally its release!</p>
+                        <p>Telegram Bot service is an automation tool that facilitates communication and interaction with users through the Telegram platform.</p>
                     </div><!--widget -->
                 </div><!-- end col -->
 
@@ -182,10 +184,9 @@
                         </div>
                         <div class="pricing-table-space"></div>
                         <div class="pricing-table-features">
-                            <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
-                            <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
-                            <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
-                            <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
+                            <p><i class="fa fa-code"></i> <strong>20++</strong>Customize BOT Commands</p>
+                            <p><i class="fa fa-usd"></i> <strong>Manage</strong> your Transactions</p>
+                            <p><i class="fa fa-server"></i> <strong>99,9%</strong> Server Uptime</p>
                             <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
                         </div>
                         <div class="pricing-table-sign-up">
@@ -197,7 +198,38 @@
         </div><!-- end container -->
     </div><!-- end section -->
 
-    <div id="contact" class="section wb">
+<div id="contact" class="section wb">
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>Need Help? Sure we are Online!</h3>
+        </div><!-- end title -->
+    
+        <div class="row">
+            <div class="col-md-12">
+                <div class="contact_form">
+                    <div id="message"></div>
+                    <form id="contactform" class="row" action="{{ route('contact.send') }}" method="post">
+                        @csrf
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <input type="text" name="full_name" class="form-control" placeholder="Name">
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <input type="email" name="email" class="form-control" placeholder="Your Email">
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <textarea class="form-control" name="comments" rows="6" placeholder="Give us more details.."></textarea>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                            <button type="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Get a Quote</button>
+                        </div>
+                    </form>
+                </div>
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</div>    
+
+    {{-- <div id="contact" class="section wb">
         <div class="container">
             <div class="section-title text-center">
                 <h3>Need Help? Sure we are Online!</h3>
@@ -227,7 +259,7 @@
                 </div><!-- end col -->
             </div><!-- end row -->
         </div><!-- end container -->
-    </div><!-- end section -->
+    </div><!-- end section --> --}}
 
     <footer class="footer">
         <div class="container">
@@ -235,7 +267,8 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="widget clearfix">
                         <div class="widget-title">
-                            <img src="/assets/homepage/images/logos/logo-hosting-light.png" alt="">
+                            <h3>GENICEACS BOT</h3>
+                            {{-- <img src="/assets/homepage/images/logos/logo-hosting-light.png" alt=""> --}}
                         </div>
                     </div><!-- end clearfix -->
                 </div><!-- end col -->
@@ -261,13 +294,14 @@
                         </div>
 
                         <ul class="footer-links">
-                            <li><a href="/assets/homepage/mailto:#">info@yoursite.com</a></li>
-                            <li><a href="/assets/homepage/#">www.yoursite.com</a></li>
-                            <li>PO Box 16122 Collins Street West Victoria 8007 Australia</li>
-                            <li>+61 3 8376 6284</li>
+                            <li><a href="/assets/homepage/mailto:#">support@genieacsbot.online</a></li>
+                            <li><a href="/assets/homepage/#">www.genieacsbot.online</a></li>
+                            {{-- <li>PO Box 16122 Collins Street West Victoria 8007 Australia</li>
+                            <li>+61 3 8376 6284</li> --}}
                         </ul><!-- end links -->
                     </div><!-- end clearfix -->
-                </div><!-- end col -->
+                </div>
+                <!-- end col -->
 
                 <div class="col-md-2 col-sm-2 col-xs-12">
                     <div class="widget clearfix">
@@ -324,5 +358,20 @@
             setActiveLink();
         });
         </script>            
+
+        {{-- <!-- Include SweetAlert -->
+    @include('sweetalert::alert') --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script>
+    // Check if session has 'status' and 'message' from backend
+    @if(session('status') && session('message'))
+        Swal.fire({
+            icon: '{{ session('status') }}',
+            title: '{{ session('message') }}',
+            showConfirmButton: false,
+            timer: 2000
+        });
+    @endif
+</script>
 </body>
 </html>

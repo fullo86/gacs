@@ -22,6 +22,10 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+// Route::get('/', function () {
+//     return redirect('/login');
+// })->name('homepage');
+
 Route::get('/', [DashboardController::class, 'dashboard'])->name('homepage');
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login/authenticate', [AuthController::class, 'authenticate'])->name('authenticate');
@@ -29,7 +33,7 @@ Route::get('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/register/save', [AuthController::class, 'store_register'])->name('registered');
 Route::get('/lostpassword', [AuthController::class, 'lostpwd'])->name('lostpassword');
 Route::get('/account/verify/{id}', [AuthController::class, 'verified'])->name('verified');
-
+Route::post('/contact/send', [DashboardController::class, 'sendEmail'])->name('contact.send');
 
 Route::middleware('auth')->group(function() {
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
@@ -52,6 +56,9 @@ Route::middleware('auth')->group(function() {
     Route::get('/transactions/checkout/{id}', [SnapController::class, 'confirmTrx'])->name('confirm-trx');
     Route::delete('/transactions/remove/{id}', [BotController::class, 'destroy'])->name('remove-trx');
     Route::get('/active/{id}', [SnapController::class, 'trigger'])->name('active');
+
+    Route::get('/users/commands/{id}', [BotController::class, 'view_command'])->name('bot-commands');
+    Route::put('/users/command/update/{id}', [BotController::class, 'updateBotCommands'])->name('update-cmd');
 
     Route::middleware('auth-admin')->group(function() {
         Route::get('/transactions/show/deleted', [BotController::class, 'showDeleted'])->name('show-deleted');

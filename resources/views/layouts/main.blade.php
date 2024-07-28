@@ -7,15 +7,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<!-- Meta -->
-		<meta name="description" content="Marketplace for Bootstrap Admin Dashboards" />
+		<meta name="description" content="GenieACS BOT" />
 		<meta name="author" content="Bootstrap Gallery" />
-		<link rel="canonical" href="https://www.bootstrap.gallery/">
-		<meta property="og:url" content="https://www.bootstrap.gallery">
-		<meta property="og:title" content="Admin Templates - Dashboard Templates | Bootstrap Gallery">
-		<meta property="og:description" content="Marketplace for Bootstrap Admin Dashboards">
+		{{-- <link rel="canonical" href="https://www.bootstrap.gallery/">
+		<meta property="og:url" content="https://www.bootstrap.gallery"> --}}
+		<meta property="og:title" content="GeniceACS BOT">
+		<meta property="og:description" content="GenieACS BOT">
 		<meta property="og:type" content="Website">
-		<meta property="og:site_name" content="Bootstrap Gallery">
-		<link rel="shortcut icon" href="/assets/images/favicon.svg" />
+		<meta property="og:site_name" content="GenieACS BOT">
+		{{-- <link rel="shortcut icon" href="/assets/images/favicon.svg" /> --}}
 
 		<!-- *************
 			************ CSS Files *************
@@ -94,7 +94,7 @@
 								</a>
 								<ul class="treeview-menu">
 									<li>
-										<a href="{{ route('bot_wa') }}">Whatsapp BOT</a>
+										<a href="#" onclick="return confirm('Service is Under Maintenance')">Whatsapp BOT</a>
 									</li>
 									<li>
 										<a href="{{ route('bot_telegram') }}">Telegram BOT</a>
@@ -139,9 +139,10 @@
 
 						<!-- App brand sm start -->
 						<div class="app-brand-sm d-md-none d-sm-block">
-							<a href="/index.html">
+							<h2>GENIEACS BOT</h2>
+							{{-- <a href="/index.html">
 								<img src="/assets/images/logo-sm.svg" class="logo" alt="Bootstrap Gallery">
-							</a>
+							</a> --}}
 						</div>
 						<!-- App brand sm end -->
 
@@ -149,7 +150,7 @@
 						<ol class="breadcrumb d-none d-lg-flex ms-3">
 							<li class="breadcrumb-item">
 								<i class="bi bi-house lh-1"></i>
-								<a href="/index.html" class="text-decoration-none">Home</a>
+								<a href="{{ route('dashboard') }}" class="text-decoration-none">Home</a>
 							</li>
 							<li class="breadcrumb-item text-secondary">
 								@if (request()->route()->uri == 'dashboard')
@@ -166,6 +167,8 @@
 								<li class="breadcrumb-item text-secondary">Telegram BOT</li>
 								@elseif(request()->route()->uri == 'account/{id}')
 								Account Settings
+								@elseif(request()->route()->uri == 'users/commands/{id}')
+								BOT Command Settings
 								@else
 								Change Password
 								@endif
@@ -208,6 +211,7 @@
 								<div class="col-xxl-12">
 
 									<!-- Start content -->
+									@yield('dashboard')
 									@yield('users')
 									@yield('edit-user')
 									@yield('change-password')
@@ -215,6 +219,7 @@
 									@yield('bot_telegram')
 									@yield('transactions')
 									@yield('checkout')
+									@yield('bot-commands-page')
 									@yield('show-deleted')
 									<!-- End content -->									
 								</div>

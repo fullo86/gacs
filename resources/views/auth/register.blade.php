@@ -42,9 +42,9 @@
                 <div class="col-xl-8 col-lg-5 col-sm-6 col-12">
                     <div class="border rounded-2 p-4 mt-5 mb-5">
                         <div class="login-form">
-                            <a href="index.html" class="mb-4 d-flex">
+                            {{-- <a href="index.html" class="mb-4 d-flex">
                                 <img src="assets/images/logo.svg" class="img-fluid login-logo" alt="Mars Admin Dashboard" />
-                            </a>
+                            </a> --}}
                             <h5 class="fw-bold mb-3">Create your account.</h5>
                             @if ($errors->any())
                                 <div class="alert alert-danger alert-dismissible fade show" role="alert">

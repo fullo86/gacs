@@ -63,7 +63,7 @@
                     <table border="0" cellpadding="0" cellspacing="0">
                       <tr>
                         <td align="center" bgcolor="#1a82e2" style="border-radius: 6px;">
-                          <a href="http://127.0.0.1:8000/account/verify/{{ $user->id }}" target="_blank" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">Verify your Email</a>
+                          <a href="https://genieacsbot.online/account/verify/{{ $user->id }}" target="_blank" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">Verify your Email</a>
                         </td>
                       </tr>
                     </table>
@@ -78,7 +78,7 @@
           <tr>
             <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
               <p style="margin: 0; color: #000">If the button above doesn't work, you can copy and paste the following link into your browser:</p>
-              <p style="margin: 0;"><a href="http://127.0.0.1:8000/account/verify/{{ $user->id }}" target="_blank">http://127.0.0.1:8000/account/verify/{{ $user->id }}</a></p>
+              <p style="margin: 0;"><a href="https://genieacsbot.online/account/verify/{{ $user->id }}" target="_blank">https://genieacsbot.online/account/verify/{{ $user->id }}</a></p>
             </td>
           </tr>
           <!-- end copy -->
